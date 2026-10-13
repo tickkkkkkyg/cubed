@@ -8,12 +8,12 @@
       name="description"
       content="Full-root KVM VPS from $4.99 per month with NVMe storage, dedicated IPv4 and IPv6, DDoS protection and instant provisioning."
     />
-    <meta name="theme-color" content="#0d0d0f" />
+    <meta name="theme-color" content="#f4f6f7" />
     <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650&family=IBM+Plex+Mono:wght@400&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <script>
@@ -30,33 +30,35 @@
     <header class="site-header">
       <div class="shell site-header__inner">
         <a class="brand" href="./index.html">
-          <svg viewBox="0 0 24 24" role="img" aria-label="XyleHosting">
-            <rect width="24" height="24" rx="6" fill="#7c5cff" />
-            <path
-              d="M7 8.5c0-.6.4-1 1-1h2.2c.4 0 .7.2.9.5l1.9 3.2 1.9-3.2c.2-.3.5-.5.9-.5H18c.6 0 1 .4 1 1v7c0 .6-.4 1-1 1h-2.2a1 1 0 0 1-.9-.5L13 12l-1.9 3.5a1 1 0 0 1-.9.5H8a1 1 0 0 1-1-1z"
-              fill="#fff"
-            />
+          <svg viewBox="0 0 32 32" role="img" aria-label="XyleHosting">
+            <path d="M16 2 30 9.5v13L16 30 2 22.5v-13z" fill="#3959ff" />
+            <path d="M11 11h3.2l1.8 3 1.8-3H21l-3.4 5L21 21h-3.2l-1.8-3-1.8 3H11l3.4-5z" fill="#fff" />
           </svg>
           XyleHosting
         </a>
+
         <nav class="nav" data-nav data-open="false" aria-label="Primary" id="primary-nav">
           <a href="./minecraft.html">Minecraft</a>
           <a href="./vps.html" aria-current="page">VPS</a>
           <a href="./dedicated.html">Dedicated</a>
-          <a href="./index.html#datacenters">Datacenters</a>
+          <a href="./index.html#datacenters">Data centers</a>
+          <a href="./index.html#faq">FAQ</a>
+
+          <div class="nav__actions">
+            <a class="btn btn--outline btn--block" href="https://billing.xyle.host" rel="noopener">Billing area</a>
+            <a class="btn btn--dark btn--block" href="https://cp.xyle.host" rel="noopener">Control panels</a>
+          </div>
         </nav>
+
         <div class="header-actions">
-          <button class="btn btn--ghost btn--sm" type="button" data-theme-toggle>Light theme</button>
-          <button
-            class="btn btn--ghost btn--sm"
-            type="button"
-            data-nav-toggle
-            aria-expanded="false"
-            aria-controls="primary-nav"
-          >
-            Menu
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to dark theme">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
           </button>
-          <a class="btn btn--primary btn--sm" href="https://billing.xyle.host" rel="noopener">Billing area</a>
+          <button class="btn" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
+          <a class="btn btn--outline btn--account" href="https://billing.xyle.host" rel="noopener">Billing area</a>
+          <a class="btn btn--dark btn--account" href="https://cp.xyle.host" rel="noopener">Control panels</a>
         </div>
       </div>
     </header>
@@ -71,12 +73,10 @@
           </p>
           <div class="hero__actions">
             <a class="btn btn--primary" href="https://billing.xyle.host" rel="noopener">Order a VPS</a>
-            <a class="btn btn--ghost" href="./dedicated.html">Need a whole machine?</a>
+            <a class="btn btn--outline" href="./dedicated.html">Need a whole machine?</a>
           </div>
         </div>
       </section>
-
-      <hr class="rule" />
 
       <section class="section" aria-labelledby="vps-tiers-heading">
         <div class="shell">
@@ -89,8 +89,8 @@
 
           <div class="cards">
             <div class="card">
-              <p class="card__eyebrow">Budget</p>
-              <h3 class="card__title">Budget VPS</h3>
+              <p class="card__flag">Budget</p>
+              <h3 class="card__name">Budget VPS</h3>
               <div class="card__price">
                 <span class="card__amount">$4.99</span>
                 <span class="card__period">per month</span>
@@ -104,13 +104,13 @@
                 <li>Standard DDoS protection</li>
               </ul>
               <span class="card__action">
-                <a class="btn btn--ghost btn--block" href="https://billing.xyle.host" rel="noopener">Get started</a>
+                <a class="btn btn--outline btn--block" href="https://billing.xyle.host" rel="noopener">Get started</a>
               </span>
             </div>
 
             <div class="card card--featured">
-              <p class="card__eyebrow">Most popular</p>
-              <h3 class="card__title">Premium VPS</h3>
+              <p class="card__flag">Most popular</p>
+              <h3 class="card__name">Premium VPS</h3>
               <div class="card__price">
                 <span class="card__amount">$9.99</span>
                 <span class="card__period">per month</span>
@@ -130,8 +130,8 @@
             </div>
 
             <div class="card">
-              <p class="card__eyebrow">Production</p>
-              <h3 class="card__title">Business VPS</h3>
+              <p class="card__flag">Production</p>
+              <h3 class="card__name">Business VPS</h3>
               <div class="card__price">
                 <span class="card__amount">$19.99</span>
                 <span class="card__period">per month</span>
@@ -146,13 +146,13 @@
                 <li>Priority support</li>
               </ul>
               <span class="card__action">
-                <a class="btn btn--ghost btn--block" href="https://billing.xyle.host" rel="noopener">Get started</a>
+                <a class="btn btn--outline btn--block" href="https://billing.xyle.host" rel="noopener">Get started</a>
               </span>
             </div>
 
             <div class="card">
-              <p class="card__eyebrow">Heavy use</p>
-              <h3 class="card__title">Elite VPS</h3>
+              <p class="card__flag">Heavy use</p>
+              <h3 class="card__name">Elite VPS</h3>
               <div class="card__price">
                 <span class="card__amount">$34.99</span>
                 <span class="card__period">per month</span>
@@ -167,14 +167,12 @@
                 <li>Priority support</li>
               </ul>
               <span class="card__action">
-                <a class="btn btn--ghost btn--block" href="https://billing.xyle.host" rel="noopener">Get started</a>
+                <a class="btn btn--outline btn--block" href="https://billing.xyle.host" rel="noopener">Get started</a>
               </span>
             </div>
           </div>
         </div>
       </section>
-
-      <hr class="rule" />
 
       <section class="section" aria-labelledby="vps-compare-heading">
         <div class="shell">
@@ -278,8 +276,6 @@
         </div>
       </section>
 
-      <hr class="rule" />
-
       <section class="section" aria-labelledby="vps-faq-heading">
         <div class="shell">
           <div class="section__head">
@@ -334,14 +330,11 @@
         <div class="site-footer__grid">
           <div>
             <a class="brand" href="./index.html">
-              <svg viewBox="0 0 24 24" role="img" aria-label="XyleHosting">
-                <rect width="24" height="24" rx="6" fill="#7c5cff" />
-                <path
-                  d="M7 8.5c0-.6.4-1 1-1h2.2c.4 0 .7.2.9.5l1.9 3.2 1.9-3.2c.2-.3.5-.5.9-.5H18c.6 0 1 .4 1 1v7c0 .6-.4 1-1 1h-2.2a1 1 0 0 1-.9-.5L13 12l-1.9 3.5a1 1 0 0 1-.9.5H8a1 1 0 0 1-1-1z"
-                  fill="#fff"
-                />
-              </svg>
-              XyleHosting
+              <svg viewBox="0 0 32 32" role="img" aria-label="XyleHosting">
+            <path d="M16 2 30 9.5v13L16 30 2 22.5v-13z" fill="#3959ff" />
+            <path d="M11 11h3.2l1.8 3 1.8-3H21l-3.4 5L21 21h-3.2l-1.8-3-1.8 3H11l3.4-5z" fill="#fff" />
+          </svg>
+          XyleHosting
             </a>
             <p class="site-footer__blurb">
               Game, VPS and dedicated hosting on hardware we own and maintain ourselves.
@@ -359,7 +352,7 @@
             <h2>Account</h2>
             <ul>
               <li><a href="https://billing.xyle.host" rel="noopener">Billing area</a></li>
-              <li><a href="https://cp.xyle.host" rel="noopener">Server panel</a></li>
+              <li><a href="https://cp.xyle.host" rel="noopener">Control panels</a></li>
             </ul>
           </div>
           <div>
