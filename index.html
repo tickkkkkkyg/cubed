@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CUBED — a voxel world in your browser</title>
+    <meta
+      name="description"
+      content="Orbit an interactive Minecraft-style voxel world rendered live in your browser with three.js."
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="stage">
+      <canvas
+        id="scene"
+        role="img"
+        tabindex="0"
+        aria-label="Interactive three-dimensional voxel world at sunset. A grass and stone chunk with trees and a lit torch."
+        aria-describedby="hint"
+      ></canvas>
+
+      <div class="overlay">
+        <header class="nav">
+          <p class="brand"><span class="brand__mark" aria-hidden="true"></span>CUBED</p>
+          <nav class="nav__links" aria-label="Primary">
+            <a href="#world">World</a>
+            <a href="#controls">Controls</a>
+          </nav>
+        </header>
+
+        <section class="hero" id="world">
+          <p class="hero__eyebrow">A voxel world, rendered live in your browser</p>
+          <h1 class="hero__title">Enter<br />the chunk</h1>
+          <p class="hero__lede">
+            A hand-built slice of Minecraft-style terrain, drawn block by block with three.js. Drag to
+            orbit it.
+          </p>
+          <div class="hero__actions">
+            <button class="btn btn--primary" id="btn-spin" type="button">Spin the world</button>
+            <button class="btn" id="btn-pause" type="button" aria-pressed="false">Pause motion</button>
+          </div>
+          <p class="hero__hint" id="hint">
+            Drag to rotate &middot; Scroll to zoom &middot; Arrow keys orbit when the world is focused
+          </p>
+        </section>
+
+        <div class="bar" id="controls">
+          <div class="orbit" role="group" aria-label="View controls">
+            <button class="orbit-btn" type="button" data-rotate="-20" aria-label="Rotate left">
+              &#9664;
+            </button>
+            <button class="orbit-btn" type="button" data-rotate="20" aria-label="Rotate right">
+              &#9654;
+            </button>
+            <button class="orbit-btn" type="button" data-reset>Reset view</button>
+          </div>
+          <p id="stats" aria-live="off" title="Live renderer budget"></p>
+        </div>
+      </div>
+
+      <div class="fallback" id="fallback" hidden>
+        <h2>This browser can&rsquo;t show the 3D world</h2>
+        <p>Here is the chunk as a still image. Everything else on the page still works.</p>
+        <img src="/fallback.svg" alt="A small voxel island of grass, stone and trees floating against a sunset sky." />
+      </div>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
