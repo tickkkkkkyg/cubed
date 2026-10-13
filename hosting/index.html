@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XyleHosting — game, VPS and dedicated hosting</title>
+    <meta
+      name="description"
+      content="Minecraft, VPS and dedicated servers on AMD Ryzen and Intel Xeon hardware with NVMe storage, built-in DDoS protection and backups in Nepal, India, Singapore and Germany."
+    />
+    <meta name="theme-color" content="#0d0d0f" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650&family=IBM+Plex+Mono:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      // apply the stored theme before first paint to avoid a flash
+      try {
+        var t = localStorage.getItem("xyle-theme");
+        if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
+    <link rel="stylesheet" href="./hosting.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="shell site-header__inner">
+        <a class="brand" href="./index.html">
+          <svg viewBox="0 0 24 24" role="img" aria-label="XyleHosting">
+            <rect width="24" height="24" rx="6" fill="#7c5cff" />
+            <path
+              d="M7 8.5c0-.6.4-1 1-1h2.2c.4 0 .7.2.9.5l1.9 3.2 1.9-3.2c.2-.3.5-.5.9-.5H18c.6 0 1 .4 1 1v7c0 .6-.4 1-1 1h-2.2a1 1 0 0 1-.9-.5L13 12l-1.9 3.5a1 1 0 0 1-.9.5H8a1 1 0 0 1-1-1z"
+              fill="#fff"
+            />
+          </svg>
+          XyleHosting
+        </a>
+
+        <nav class="nav" data-nav data-open="false" aria-label="Primary">
+          <a href="./minecraft.html">Minecraft</a>
+          <a href="./vps.html">VPS</a>
+          <a href="./dedicated.html">Dedicated</a>
+          <a href="./index.html#datacenters">Datacenters</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="btn btn--ghost btn--sm" type="button" data-theme-toggle>Light theme</button>
+          <button class="btn btn--ghost btn--sm" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
+            Menu
+          </button>
+          <a class="btn btn--primary btn--sm" href="https://billing.xyle.host" rel="noopener">Billing area</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="shell hero__grid">
+          <div>
+            <h1 class="hero__title" style="font-size: var(--text-hero)">
+              Hosting built for the servers people actually play on
+            </h1>
+            <p class="hero__lede">
+              Minecraft, full-root VPS and bare-metal dedicated servers on Ryzen and Xeon hardware
+              with NVMe storage. Every plan includes DDoS protection, backups and a panel you can
+              actually use.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="./minecraft.html">See Minecraft plans</a>
+              <a class="btn btn--ghost" href="./vps.html">Compare VPS tiers</a>
+            </div>
+            <p class="status-line hero__note">
+              <span class="dot" aria-hidden="true"></span>
+              <span>All services operational. No setup fees, ever.</span>
+            </p>
+          </div>
+
+          <div class="card" aria-labelledby="spec-heading">
+            <p class="card__eyebrow">Hardware</p>
+            <h2 class="card__title" id="spec-heading">What you actually get</h2>
+            <table class="spec">
+              <caption class="visually-hidden">
+                Hardware specifications shared across every XyleHosting plan
+              </caption>
+              <tbody>
+                <tr>
+                  <th scope="row">Game servers</th>
+                  <td>AMD Ryzen 9 7950X</td>
+                </tr>
+                <tr>
+                  <th scope="row">VPS and dedicated</th>
+                  <td>Intel Xeon Gold, Ryzen 7</td>
+                </tr>
+                <tr>
+                  <th scope="row">Storage</th>
+                  <td>NVMe SSD on every plan</td>
+                </tr>
+                <tr>
+                  <th scope="row">Network</th>
+                  <td>1 Gbps port, DDoS filtering included</td>
+                </tr>
+                <tr>
+                  <th scope="row">Backups</th>
+                  <td>Daily offsite on premium and above</td>
+                </tr>
+                <tr>
+                  <th scope="row">Uptime</th>
+                  <td>99.9% target, monitored continuously</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <hr class="rule" />
+
+      <section class="section" aria-labelledby="products-heading">
+        <div class="shell">
+          <div class="section__head">
+            <h2 class="section__title" id="products-heading">Pick what you are running</h2>
+            <p class="section__lede">
+              Three product lines, one billing area and one support desk. Move between them without
+              changing how you work.
+            </p>
+          </div>
+
+          <div class="cards">
+            <a class="card card--featured" href="./minecraft.html">
+              <p class="card__eyebrow">Most popular</p>
+              <h3 class="card__title">Minecraft hosting</h3>
+              <p class="card__desc">
+                Java and Bedrock servers that stay smooth at peak hours. Mods, plugins, sub-servers
+                and proxy networks supported.
+              </p>
+              <div class="card__price">
+                <span class="card__amount">$3.99</span>
+                <span class="card__period">per month</span>
+              </div>
+              <ul class="card__list">
+                <li>NVMe storage, 1 Gbps port</li>
+                <li>DDoS protection included</li>
+                <li>Daily offsite backups</li>
+                <li>Free server migration</li>
+              </ul>
+              <span class="card__action btn btn--primary btn--block">View Minecraft plans</span>
+            </a>
+
+            <a class="card" href="./vps.html">
+              <p class="card__eyebrow">Full root</p>
+              <h3 class="card__title">VPS hosting</h3>
+              <p class="card__desc">
+                KVM virtual servers with full root access, a dedicated IPv4 and IPv6, and hardware
+                you can benchmark yourself.
+              </p>
+              <div class="card__price">
+                <span class="card__amount">$4.99</span>
+                <span class="card__period">per month</span>
+              </div>
+              <ul class="card__list">
+                <li>Full root access</li>
+                <li>Dedicated IPv4 and IPv6</li>
+                <li>NVMe storage</li>
+                <li>Weekly backups included</li>
+              </ul>
+              <span class="card__action btn btn--ghost btn--block">View VPS plans</span>
+            </a>
+
+            <a class="card" href="./dedicated.html">
+              <p class="card__eyebrow">Bare metal</p>
+              <h3 class="card__title">Dedicated servers</h3>
+              <p class="card__desc">
+                Whole machines with nothing else on them. For high player counts, heavy mod packs or
+                workloads that should not share a host.
+              </p>
+              <div class="card__price">
+                <span class="card__amount">$54</span>
+                <span class="card__period">per month</span>
+              </div>
+              <ul class="card__list">
+                <li>Dedicated CPU and RAM</li>
+                <li>Redundant power and network</li>
+                <li>24-hour response target</li>
+                <li>Optional managed support</li>
+              </ul>
+              <span class="card__action btn btn--ghost btn--block">View dedicated servers</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <hr class="rule" />
+
+      <section class="section" aria-labelledby="why-heading">
+        <div class="shell">
+          <div class="section__head">
+            <h2 class="section__title" id="why-heading">Why run it with us</h2>
+            <p class="section__lede">
+              The parts that decide whether a server is worth paying for after the first month.
+            </p>
+          </div>
+
+          <div class="features">
+            <div class="feature">
+              <h3>DDoS protection on every plan</h3>
+              <p>
+                Filtering runs at the edge of the network, so an attack is dropped before it reaches
+                your server rather than after it has already saturated your port.
+              </p>
+            </div>
+            <div class="feature">
+              <h3>NVMe everywhere, not just on the top tier</h3>
+              <p>
+                Chunk loading and world generation are storage-bound. Cheap SSD drives are the
+                reason most budget servers stutter, so we do not sell them.
+              </p>
+            </div>
+            <div class="feature">
+              <h3>Backups you can restore from</h3>
+              <p>
+                Daily offsite snapshots on premium plans and above, restorable from the panel without
+                opening a ticket.
+              </p>
+            </div>
+            <div class="feature">
+              <h3>Migration is free</h3>
+              <p>
+                Moving an existing server between locations or from another host costs nothing. We
+                handle the transfer, you keep your players' IP.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="rule" />
+
+      <section class="section" id="datacenters" aria-labelledby="dc-heading">
+        <div class="shell">
+          <div class="section__head">
+            <h2 class="section__title" id="dc-heading">Where the servers are</h2>
+            <p class="section__lede">
+              Pick the location closest to your players. You can move a server later without
+              rebuilding it.
+            </p>
+          </div>
+
+          <div class="regions">
+            <div class="region">
+              <p class="region__city">Kathmandu, Nepal</p>
+              <p class="region__meta">About 5 ms to Nepal</p>
+            </div>
+            <div class="region">
+              <p class="region__city">Mumbai, India</p>
+              <p class="region__meta">About 12 ms to India</p>
+            </div>
+            <div class="region">
+              <p class="region__city">Singapore</p>
+              <p class="region__meta">About 25 ms to Southeast Asia</p>
+            </div>
+            <div class="region">
+              <p class="region__city">Frankfurt, Germany</p>
+              <p class="region__meta">About 8 ms to Europe</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="rule" />
+
+      <section class="section" aria-labelledby="faq-heading">
+        <div class="shell">
+          <div class="section__head">
+            <h2 class="section__title" id="faq-heading">Questions people ask first</h2>
+          </div>
+
+          <div class="faq">
+            <details>
+              <summary>Can I change plans later?</summary>
+              <p class="faq__body">
+                Yes. Upgrades apply immediately and the billing difference is prorated. Downgrades
+                take effect at the end of the current billing period.
+              </p>
+            </details>
+            <details>
+              <summary>What happens if a server goes down?</summary>
+              <p class="faq__body">
+                Every node is monitored continuously. If hardware fails, we move your server to
+                another machine automatically and the panel shows the move in the event log.
+              </p>
+            </details>
+            <details>
+              <summary>Do you support modpacks and plugins?</summary>
+              <p class="faq__body">
+                Java and Bedrock are both supported. Modpacks, Bukkit, Spigot, Paper and Fabric
+                install from the panel, and you have full file access over SFTP for anything we do
+                not list.
+              </p>
+            </details>
+            <details>
+              <summary>How do backups work?</summary>
+              <p class="faq__body">
+                We take daily offsite snapshots on premium plans and above. You can restore any of
+                the last seven from the panel, and download them if you want your own copy.
+              </p>
+            </details>
+            <details>
+              <summary>Do you offer refunds?</summary>
+              <p class="faq__body">
+                Yes, within 72 hours of the first payment on a new order. See the terms of service
+                for the full conditions.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="shell">
+          <div class="cta">
+            <h2 class="cta__title">Open the billing area</h2>
+            <p>
+              Create an account, pick a plan and your server is provisioned automatically. No
+              setup fee and no waiting on a sales call.
+            </p>
+            <a class="btn btn--primary" href="https://billing.xyle.host" rel="noopener">
+              Go to billing
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell">
+        <div class="site-footer__grid">
+          <div>
+            <a class="brand" href="./index.html">
+              <svg viewBox="0 0 24 24" role="img" aria-label="XyleHosting">
+                <rect width="24" height="24" rx="6" fill="#7c5cff" />
+                <path
+                  d="M7 8.5c0-.6.4-1 1-1h2.2c.4 0 .7.2.9.5l1.9 3.2 1.9-3.2c.2-.3.5-.5.9-.5H18c.6 0 1 .4 1 1v7c0 .6-.4 1-1 1h-2.2a1 1 0 0 1-.9-.5L13 12l-1.9 3.5a1 1 0 0 1-.9.5H8a1 1 0 0 1-1-1z"
+                  fill="#fff"
+                />
+              </svg>
+              XyleHosting
+            </a>
+            <p class="site-footer__blurb">
+              Game, VPS and dedicated hosting on hardware we own and maintain ourselves.
+            </p>
+          </div>
+
+          <div>
+            <h2>Solutions</h2>
+            <ul>
+              <li><a href="./minecraft.html">Minecraft</a></li>
+              <li><a href="./vps.html">VPS</a></li>
+              <li><a href="./dedicated.html">Dedicated servers</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2>Account</h2>
+            <ul>
+              <li><a href="https://billing.xyle.host" rel="noopener">Billing area</a></li>
+              <li><a href="https://cp.xyle.host" rel="noopener">Server panel</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2>Legal</h2>
+            <ul>
+              <li><a href="./terms.html">Terms of service</a></li>
+              <li><a href="./privacy.html">Privacy policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="site-footer__bottom">
+          <p>© 2026 XyleHosting. All rights reserved.</p>
+          <p>Minecraft is a trademark of Mojang Studios.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./hosting.js"></script>
+  </body>
+</html>
