@@ -699,15 +699,16 @@ a.card:hover {
   border-radius: var(--pill);
 }
 
-.card--featured .card__flag {
-  margin: calc(var(--space-5) * -1) 0 var(--space-4);
+/* flag colour comes from a modifier, not from .card--featured, so every card
+   can carry one and stay aligned */
+.card__flag--hot {
   color: var(--badge-ink);
   background: var(--badge-top);
 }
 
 .card__flag--value {
-  background: var(--badge-value);
   color: #ffffff;
+  background: var(--badge-value);
 }
 
 .card__name {
@@ -1147,4 +1148,119 @@ a.card:hover {
   border-top: 1px solid var(--line);
   color: var(--ink-muted);
   font-size: var(--text-xs);
+}
+/* ---------- imagery ---------- */
+
+.media {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface-sunken);
+  border-radius: var(--radius-card);
+}
+
+.media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* intrinsic ratio keeps the box reserved before the file arrives, so nothing shifts */
+.media--16x9 { aspect-ratio: 16 / 9; }
+.media--4x3 { aspect-ratio: 4 / 3; }
+.media--3x2 { aspect-ratio: 3 / 2; }
+.media--1x1 { aspect-ratio: 1 / 1; }
+
+/* product card header */
+.card .media {
+  margin: calc(var(--space-6) * -1) calc(var(--space-6) * -1) var(--space-5);
+  border-radius: var(--radius-card) var(--radius-card) 0 0;
+}
+
+.card:has(.media) .card__flag {
+  margin: var(--space-4) 0 0;
+}
+
+/* full-bleed band with copy over it */
+.band {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-card);
+  isolation: isolate;
+}
+
+.band img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.band::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    100deg,
+    color-mix(in srgb, var(--band-tint) 92%, transparent) 0%,
+    color-mix(in srgb, var(--band-tint) 72%, transparent) 48%,
+    color-mix(in srgb, var(--band-tint) 40%, transparent) 100%
+  );
+}
+
+.band__body {
+  padding: var(--space-10) var(--space-6);
+  max-width: 56ch;
+}
+
+.band__title {
+  font-size: var(--text-xl);
+  color: #ffffff;
+}
+
+.band p {
+  margin-top: var(--space-3);
+  color: rgb(255 255 255 / 82%);
+  font-size: var(--text-sm);
+}
+
+.band__body .btn {
+  margin-top: var(--space-6);
+}
+
+/* two-up players / hardware block */
+.duo {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 760px) {
+  .duo {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-5);
+  }
+}
+
+.duo figure {
+  margin: 0;
+}
+
+.duo figcaption {
+  margin-top: var(--space-3);
+  color: var(--ink-muted);
+  font-size: var(--text-sm);
+}
+
+/* small decorative icon frame */
+.icon-frame {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1 / 1;
+  background: var(--surface-sunken);
+  border-radius: var(--radius-card);
+  overflow: hidden;
 }

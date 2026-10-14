@@ -90,6 +90,20 @@ visible "this is a draft" callout. Before you publish them as binding, counsel s
 
 `legal@xyle.host` and `privacy@xyle.host` are placeholders. Make sure they resolve before launch.
 
+## Images
+
+Photography on the hosting pages is self-hosted in `public/img/` as responsive WebP at
+480 / 768 / 960 px. Every file is CC0 or Public Domain Mark — no attribution legally
+required, but `public/img/CREDITS.md` credits each source anyway.
+
+Sources were pulled through the Openverse API filtered to `license=cc0,pdm`. Nothing is
+hotlinked, so a third party cannot break the page or throttle the visitor. Only widths at
+or below each source's native width are emitted, so the `srcset` in the markup is honest.
+
+**No Minecraft artwork is used.** Mojang owns the Minecraft IP, and their brand guidelines
+restrict using it to promote commercial products — a CC licence on a screenshot does not
+override that. The Minecraft identity leans on the voxel renderer at the site root instead.
+
 ## Deployment
 
 GitHub Actions builds on every push to `main` and deploys to Pages. The Vite `base` is `"./"`, so
