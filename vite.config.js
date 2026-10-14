@@ -16,6 +16,7 @@ export default defineConfig({
         hosting: resolve(import.meta.dirname, "hosting/index.html"),
         minecraft: resolve(import.meta.dirname, "hosting/minecraft.html"),
         vps: resolve(import.meta.dirname, "hosting/vps.html"),
+        "web-hosting": resolve(import.meta.dirname, "hosting/web-hosting.html"),
         dedicated: resolve(import.meta.dirname, "hosting/dedicated.html"),
         terms: resolve(import.meta.dirname, "hosting/terms.html"),
         privacy: resolve(import.meta.dirname, "hosting/privacy.html"),

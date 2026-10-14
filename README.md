@@ -27,7 +27,8 @@ src/scene.js              renderer, lights, terrain generation, render loop, dis
 src/textures.js           procedural pixel textures (CanvasTexture, NearestFilter)
 src/style.css             3D site design tokens + layout
 
-hosting/index.html        marketing home
+hosting/index.html        marketing home (stacked product list)
+hosting/web-hosting.html  website hosting plans
 hosting/minecraft.html    Minecraft plans
 hosting/vps.html          VPS plans
 hosting/dedicated.html    dedicated server plans

@@ -41,6 +41,7 @@
           <a href="./minecraft.html">Minecraft</a>
           <a href="./vps.html">VPS</a>
           <a href="./dedicated.html">Dedicated</a>
+          <a href="./web-hosting.html">Web hosting</a>
           <a href="#datacenters">Data centers</a>
           <a href="#faq">FAQ</a>
 
@@ -69,7 +70,7 @@
           <div class="hero__copy">
             <p class="eyebrow">
               <span class="eyebrow__dot" aria-hidden="true">→</span>
-              Now offering dedicated servers
+              Now introducing dedicated server marketplace
             </p>
 
             <h1 class="hero__title">Start strong<br />with Xyle.</h1>
@@ -80,8 +81,14 @@
             </p>
 
             <div class="hero__actions">
-              <a class="btn btn--primary" href="./minecraft.html">Minecraft from $3.99/mo</a>
-              <a class="btn btn--outline" href="./vps.html">VPS from $4.99/mo</a>
+              <a class="btn btn--primary" href="./minecraft.html">As low as $1/GB</a>
+              <a class="hero__link" href="https://billing.xyle.host" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 14a8 8 0 0 1 16 0" />
+                  <path d="M4 14v4a2 2 0 0 0 2 2h2v-6H4zM20 14v4a2 2 0 0 1-2 2h-2v-6h4z" />
+                </svg>
+                Support center
+              </a>
             </div>
 
             <p class="hero__status">
@@ -93,29 +100,32 @@
           <div class="showcase" aria-hidden="true">
             <svg class="showcase__traces" viewBox="0 0 400 300" fill="none">
               <g stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M60 0v70h40v40h60" />
-                <path d="M40 130v50h50v60" />
-                <path d="M170 0v40h50" />
-                <path d="M230 150h70v60h50" />
-                <path d="M300 0v90h40v50" />
-                <path d="M0 240h70v40h80" />
-                <path d="M350 150v90h-40" />
-                <path d="M120 300v-50h60v-40" />
-                <path d="M260 300v-40h-40" />
+                <path d="M40 0v60h50v50h60" />
+                <path d="M170 0v40h60v40" />
+                <path d="M330 0v80h40v50" />
+                <path d="M20 120v60h40v70h70" />
+                <path d="M250 150h70v50h60" />
+                <path d="M0 250h60v50h80" />
+                <path d="M300 250v50h-60" />
+                <path d="M150 300v-50h60v-40" />
+              </g>
+              <g stroke="var(--accent)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M300 0v40h50v60h50" />
+                <path d="M20 210h60v40h90v-50" />
               </g>
               <g fill="currentColor">
-                <circle cx="60" cy="110" r="5" />
-                <circle cx="170" cy="150" r="5" />
-                <circle cx="300" cy="140" r="5" />
-                <circle cx="90" cy="280" r="5" />
-                <circle cx="310" cy="240" r="5" />
-                <circle cx="220" cy="40" r="5" />
+                <circle cx="90" cy="110" r="5" />
+                <circle cx="230" cy="80" r="5" />
+                <circle cx="350" cy="130" r="5" />
+                <circle cx="60" cy="250" r="5" />
+                <circle cx="300" cy="200" r="5" />
+                <circle cx="210" cy="250" r="5" />
               </g>
             </svg>
 
             <p class="chip chip--1">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5z"/></svg>
-              Advanced security
+              Advanced Security
             </p>
             <p class="chip chip--2">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 20a8 8 0 1 0-8-8"/></svg>
@@ -123,11 +133,11 @@
             </p>
             <p class="chip chip--3">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg>
-              99.9% uptime
+              99.99% Uptime
             </p>
             <p class="chip chip--4">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v18M5 8l7-5 7 5M5 16l7 5 7-5"/></svg>
-              Unlimited scaling
+              Unlimited Scaling
             </p>
           </div>
         </div>
@@ -135,124 +145,85 @@
 
       <section class="section" aria-labelledby="products-heading">
         <div class="shell">
-          <div class="section__head">
-            <h2 class="section__title" id="products-heading">Pick what you are running</h2>
-            <p class="section__lede">
-              Three product lines, one billing area and one support desk.
-            </p>
+          <h2 class="visually-hidden" id="products-heading">Products</h2>
+
+          <div class="products">
+            <a class="product" href="./web-hosting.html">
+              <span class="product__icon" aria-hidden="true">&#127970;</span>
+              <h3 class="product__name">Website Hosting</h3>
+              <p class="product__desc">
+                Host your website on a fast, reliable platform designed for quick page loading,
+                stable uptime, secure performance, and the flexibility your business needs to grow
+                online.
+              </p>
+              <span class="product__link">
+                From $3.99/mo
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </span>
+            </a>
+
+            <a class="product" href="./minecraft.html">
+              <span class="product__badge product__badge--hot">Most popular</span>
+              <span class="product__icon" aria-hidden="true">&#127978;</span>
+              <h3 class="product__name">Minecraft Hosting</h3>
+              <p class="product__desc">
+                Create a smooth Minecraft experience for your players with high-performance hardware,
+                low-latency networking, DDoS protection, and reliable server resources built for
+                growing communities.
+              </p>
+              <span class="product__link">
+                From $1/GB
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </span>
+            </a>
+
+            <a class="product" href="./vps.html">
+              <span class="product__icon" aria-hidden="true">&#9729;&#65039;</span>
+              <h3 class="product__name">VPS Hosting</h3>
+              <p class="product__desc">
+                Fast and flexible virtual servers powered by NVMe storage, reliable Intel Xeon
+                processors, dedicated resources, and full control for websites, apps, game servers,
+                and business projects.
+              </p>
+              <span class="product__link">
+                From $1.50/GB
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </span>
+            </a>
+
+            <a class="product" href="./dedicated.html">
+              <span class="product__badge product__badge--value">Best value</span>
+              <span class="product__icon" aria-hidden="true">&#128421;</span>
+              <h3 class="product__name">Dedicated Servers</h3>
+              <p class="product__desc">
+                Powerful bare-metal performance deployed in secure, world-class data centers with
+                redundant power, enterprise-grade hardware, and premium network connectivity built
+                for demanding workloads.
+              </p>
+              <span class="product__link">
+                From $54/mo
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </span>
+            </a>
           </div>
 
-          <div class="cards">
-            <a class="card" href="./minecraft.html">
-              <span class="media media--16x9">
-                <img src="../img/gamer-woman-768.webp"
-                 srcset="../img/gamer-woman-480.webp 480w, ../img/gamer-woman-768.webp 768w, ../img/gamer-woman-960.webp 960w"
-                 sizes="(min-width: 1000px) 25vw, (min-width: 620px) 45vw, 92vw"
-                 alt="A player holding a controller."
-                 width="768" height="512"
-                 loading="lazy" decoding="async" />
-              </span>
-              <p class="card__flag card__flag--hot">Most popular</p>
-              <h3 class="card__name">Minecraft hosting</h3>
-              <div class="card__price">
-                <span class="card__amount">$3.99</span>
-                <span class="card__period">per month</span>
-              </div>
-              <p class="card__desc">
-                Java and Bedrock that stay smooth at peak hours. Mods, plugins, sub-servers and
-                proxy networks supported.
-              </p>
-              <ul class="card__list">
-                <li>
-                  NVMe storage, 1 Gbps port
-                </li>
-                <li>
-                  DDoS protection included
-                </li>
-                <li>
-                  Daily offsite backups
-                </li>
-                <li>
-                  Free server migration
-                </li>
-              </ul>
-              <span class="card__action btn btn--outline btn--block">View plans</span>
-            </a>
+          <div class="product__cta-row">
+            <a class="btn btn--primary" href="./minecraft.html">View full product lineup</a>
+            <a class="btn btn--primary" href="./dedicated.html">View server marketplace</a>
+          </div>
 
-            <a class="card card--featured" href="./vps.html">
-              <span class="media media--16x9">
-                <img src="../img/code-1-768.webp"
-                 srcset="../img/code-1-480.webp 480w, ../img/code-1-768.webp 768w, ../img/code-1-960.webp 960w"
-                 sizes="(min-width: 1000px) 25vw, (min-width: 620px) 45vw, 92vw"
-                 alt="Syntax-highlighted source code on a dark screen."
-                 width="768" height="512"
-                 loading="lazy" decoding="async" />
-              </span>
-              <p class="card__flag card__flag--value">Best value</p>
-              <h3 class="card__name">VPS hosting</h3>
-              <div class="card__price">
-                <span class="card__amount">$4.99</span>
-                <span class="card__period">per month</span>
-              </div>
-              <p class="card__desc">
-                KVM virtual servers with full root access, a dedicated IPv4 and IPv6, and hardware
-                you can benchmark yourself.
-              </p>
-              <ul class="card__list">
-                <li>
-                  Full root access
-                </li>
-                <li>
-                  Dedicated IPv4 and IPv6
-                </li>
-                <li>
-                  NVMe storage
-                </li>
-                <li>
-                  Weekly backups included
-                </li>
-              </ul>
-              <span class="card__action btn btn--primary btn--block">View plans</span>
-            </a>
-
-            <a class="card" href="./dedicated.html">
-              <span class="media media--16x9">
-                <img src="../img/dedicated-rack-768.webp"
-                 srcset="../img/dedicated-rack-480.webp 480w, ../img/dedicated-rack-768.webp 768w, ../img/dedicated-rack-960.webp 960w"
-                 sizes="(min-width: 1000px) 25vw, (min-width: 620px) 45vw, 92vw"
-                 alt="An open server rack with cabling at the rear."
-                 width="768" height="512"
-                 loading="lazy" decoding="async" />
-              </span>
-              <p class="card__flag">Bare metal</p>
-              <h3 class="card__name">Dedicated servers</h3>
-              <div class="card__price">
-                <span class="card__amount">$54</span>
-                <span class="card__period">per month</span>
-              </div>
-              <p class="card__desc">
-                Whole machines with nothing else on them, for high player counts and heavy mod packs.
-              </p>
-              <ul class="card__list">
-                <li>
-                  Dedicated CPU and RAM
-                </li>
-                <li>
-                  Redundant power and network
-                </li>
-                <li>
-                  24-hour response target
-                </li>
-                <li>
-                  Optional managed support
-                </li>
-              </ul>
-              <span class="card__action btn btn--outline btn--block">View servers</span>
-            </a>
+          <div class="partners">
+            <p class="partners__label">Hardware we run on</p>
+            <div class="partners__row">
+              <span>AMD RYZEN</span>
+              <span>INTEL XEON</span>
+              <span>NVMe</span>
+              <span>1 Gbps</span>
+              <span>DDoS GUARD</span>
+            </div>
           </div>
         </div>
       </section>
-
 
       <section class="section">
         <div class="shell">
@@ -332,22 +303,22 @@
 
           <div class="regions">
             <div class="region">
-              <p class="region__flag" aria-hidden="true">🇳🇵</p>
+              <p class="region__flag" aria-hidden="true">&#127757;&#65039;</p>
               <p class="region__city">Nepal</p>
               <p class="region__meta">Kathmandu, about 5 ms</p>
             </div>
             <div class="region">
-              <p class="region__flag" aria-hidden="true">🇮🇳</p>
+              <p class="region__flag" aria-hidden="true">&#127479;&#65039;</p>
               <p class="region__city">India</p>
               <p class="region__meta">Mumbai, about 12 ms</p>
             </div>
             <div class="region">
-              <p class="region__flag" aria-hidden="true">🇸🇬</p>
+              <p class="region__flag" aria-hidden="true">&#127464;&#65039;</p>
               <p class="region__city">Singapore</p>
               <p class="region__meta">About 25 ms to SEA</p>
             </div>
             <div class="region">
-              <p class="region__flag" aria-hidden="true">🇩🇪</p>
+              <p class="region__flag" aria-hidden="true">&#127465;&#65039;</p>
               <p class="region__city">Germany</p>
               <p class="region__meta">Frankfurt, about 8 ms</p>
             </div>
@@ -436,6 +407,7 @@
               <li><a href="./minecraft.html">Minecraft</a></li>
               <li><a href="./vps.html">VPS</a></li>
               <li><a href="./dedicated.html">Dedicated servers</a></li>
+              <li><a href="./web-hosting.html">Website hosting</a></li>
             </ul>
           </div>
           <div>
