@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schematic — animated circuit board</title>
+    <meta
+      name="description"
+      content="A procedurally generated circuit schematic with packets travelling along the traces, rendered live on canvas."
+    />
+    <meta name="theme-color" content="#0a1526" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./schematic.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#controls">Skip to controls</a>
+
+    <canvas
+      id="board"
+      role="img"
+      aria-label="An animated circuit schematic. Data packets travel along traces between labelled components. Use the controls to change speed, colour scheme or layout."
+    ></canvas>
+
+    <header class="topbar">
+      <a class="mark" href="../hosting/index.html">
+        <svg viewBox="0 0 32 32" role="img" aria-label="Back to XyleHosting">
+          <path d="M16 2 30 9.5v13L16 30 2 22.5v-13z" fill="#3959ff" />
+          <path d="M11 11h3.2l1.8 3 1.8-3H21l-3.4 5L21 21h-3.2l-1.8-3-1.8 3H11l3.4-5z" fill="#fff" />
+        </svg>
+        XyleHosting
+      </a>
+      <p class="topbar__title">Schematic</p>
+      <p class="topbar__meta" id="stats" aria-live="off">&mdash;</p>
+    </header>
+
+    <section class="readout" id="readout" hidden aria-live="polite">
+      <p class="readout__id" id="readout-id">&mdash;</p>
+      <dl class="readout__rows">
+        <div><dt>Type</dt><dd id="readout-kind">&mdash;</dd></div>
+        <div><dt>Pins</dt><dd id="readout-pins">&mdash;</dd></div>
+        <div><dt>Nets</dt><dd id="readout-nets">&mdash;</dd></div>
+      </dl>
+      <p class="readout__hint">Click the component again to release the probe.</p>
+    </section>
+
+    <form class="controls" id="controls" aria-label="Schematic controls">
+      <div class="controls__row">
+        <button class="cbtn cbtn--primary" type="button" id="toggle" aria-pressed="false">
+          Pause
+        </button>
+        <button class="cbtn" type="button" id="reseed">New layout</button>
+      </div>
+
+      <div class="controls__row controls__row--field">
+        <label class="field" for="speed">
+          <span>Speed <output id="speed-out">1.0×</output></span>
+          <input type="range" id="speed" min="0" max="3" step="0.1" value="1" />
+        </label>
+      </div>
+
+      <fieldset class="fieldset">
+        <legend class="visually-hidden">Colour scheme</legend>
+        <div class="chips" role="radiogroup" aria-label="Colour scheme">
+          <button class="swatch swatch--blueprint is-active" type="button" role="radio" aria-checked="true" data-theme="blueprint">
+            Blueprint
+          </button>
+          <button class="swatch swatch--amber" type="button" role="radio" aria-checked="false" data-theme="amber">
+            Amber
+          </button>
+          <button class="swatch swatch--mint" type="button" role="radio" aria-checked="false" data-theme="mint">
+            Mint
+          </button>
+        </div>
+      </fieldset>
+
+      <p class="controls__hint">Hover a component to trace its nets. Click to pin the probe.</p>
+    </form>
+
+    <script type="module" src="./schematic.js"></script>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

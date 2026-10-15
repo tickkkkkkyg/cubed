@@ -6,6 +6,7 @@ Two sites in one Vite project, both deployed to GitHub Pages.
 |---|---|
 | `/` | A Minecraft-style 3D landing page — three.js, procedural voxel terrain |
 | `/hosting/` | The XyleHosting marketing and legal site |
+| `/animation/` | An animated circuit schematic — procedural board, packets travelling the traces |
 
 Both are static and share one build. There is no framework.
 
@@ -26,6 +27,11 @@ src/main.js               3D site wiring: keyboard, buttons, error handling
 src/scene.js              renderer, lights, terrain generation, render loop, dispose
 src/textures.js           procedural pixel textures (CanvasTexture, NearestFilter)
 src/style.css             3D site design tokens + layout
+
+animation/index.html       schematic animation page
+animation/schematic.js     procedural board generation + packet renderer
+animation/schematic.css    animation page styles
+animation/app.js           control wiring
 
 hosting/index.html        marketing home (stacked product list)
 hosting/web-hosting.html  website hosting plans
@@ -90,6 +96,28 @@ visible "this is a draft" callout. Before you publish them as binding, counsel s
 - your actual sub-processors, retention periods and data-transfer safeguards
 
 `legal@xyle.host` and `privacy@xyle.host` are placeholders. Make sure they resolve before launch.
+
+## The schematic animation
+
+`animation/` draws a procedurally generated circuit board on canvas 2D. A seeded
+RNG (`mulberry32`) places a core IC and eight satellite components on a grid and
+routes traces between their pins, so a given seed always draws the same board.
+
+Packets travel along each trace and are placed by arc length, so they follow the
+rounded corners rather than cutting across them. Hovering a component dims
+everything it is not wired to; clicking pins the probe and shows its nets.
+
+Two performance decisions carry this page:
+
+- **No `shadowBlur` in the frame loop.** Canvas shadow blur is the most expensive
+  operation available here, and doing one per packet cost ~48 fps of headroom. A
+  radial-gradient sprite is baked once per colour and blitted instead.
+- **The static layer is cached.** Grid, traces and node bodies never change
+  between frames, so they are drawn once to an offscreen canvas and blitted.
+  Only packets are drawn live. Focusing a component redraws from scratch, since
+  selective dimming cannot be expressed in a flat cached image.
+
+Measured 52 fps at 1440×900 under pure software rendering (SwiftShader, no GPU).
 
 ## Images
 

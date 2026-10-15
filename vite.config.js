@@ -12,6 +12,7 @@ export default defineConfig({
       input: {
         // 3D voxel site
         main: resolve(import.meta.dirname, "index.html"),
+        schematic: resolve(import.meta.dirname, "animation/index.html"),
         // XyleHosting marketing + legal pages
         hosting: resolve(import.meta.dirname, "hosting/index.html"),
         minecraft: resolve(import.meta.dirname, "hosting/minecraft.html"),
